@@ -5,7 +5,7 @@ import { debounce } from "lodash";
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [cards, setCards] = useState([]);
   const [isAuthenticated, setIsAuthenticated] = useState(false);

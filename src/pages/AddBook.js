@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import { useGlobalContext } from "../context";
 
 const AddBook = () => {
-  const { isAuthenticated, setCards } = useGlobalContext();
+  const { isAuthenticated, setCards, setSearchTerm } = useGlobalContext();
   const [bookTitle, setBookTitle] = useState("");
   const [author, setAuthor] = useState("");
 
@@ -48,6 +48,7 @@ const AddBook = () => {
       });
       setBookTitle("");
       setAuthor("");
+      setSearchTerm("");
     } catch (err) {
       toast.error(err.response.data.message, {
         position: "bottom-left",
