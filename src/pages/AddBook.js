@@ -61,7 +61,10 @@ const AddBook = () => {
       <div className="container py-5 h-100">
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col-12 col-md-8 col-lg-6 col-xl-5">
-            <div className="card shadow-2-strong" style={{ borderRadius: "1rem" }}>
+            <div
+              className="card shadow-2-strong"
+              style={{ borderRadius: "1rem" }}
+            >
               <form className="card-body p-5 " onSubmit={handleSubmit}>
                 <h3 className="mb-5 text-center">Add Book</h3>
                 <div className="form-outline mb-4">
@@ -75,7 +78,7 @@ const AddBook = () => {
                     onChange={(e) => setBookTitle(e.target.value)}
                   />
                   {!isBookTitleValid && (
-                    <div classNameName="invalid">
+                    <div className="invalid">
                       <span>* Please enter a valid Book Title</span>
                     </div>
                   )}
@@ -92,15 +95,23 @@ const AddBook = () => {
                     onChange={(e) => setAuthor(e.target.value)}
                   />
                   {!isAuthorValid && (
-                    <div classNameName="invalid">
+                    <div className="invalid">
                       <span>* Please enter a valid Author Name</span>
                     </div>
                   )}
                 </div>
-
-                <button className="btn btn-primary btn-lg btn-block" type="submit">
-                  Add Book
-                </button>
+                <div className="d-grid gap-2">
+                  <button className="btn btn-primary" type="submit">
+                    Add Book
+                  </button>
+                  <button
+                    className="btn btn-secondary"
+                    type="button"
+                    onClick={() => navigate("/")}
+                  >
+                    Go Back
+                  </button>
+                </div>
 
                 <hr className="my-4" />
               </form>

@@ -82,7 +82,7 @@ const Register = () => {
                     onChange={(e) => setName(e.target.value)}
                   />
                   {!isNameValid && (
-                    <div classNameName="invalid">
+                    <div className="invalid">
                       <span>* Please enter a valid Name</span>
                     </div>
                   )}
@@ -100,7 +100,7 @@ const Register = () => {
                     onChange={(e) => setEmail(e.target.value)}
                   />
                   {!isEmailValid && (
-                    <div classNameName="invalid">
+                    <div className="invalid">
                       <span>* Please enter a valid Email .</span>
                     </div>
                   )}
@@ -118,7 +118,7 @@ const Register = () => {
                     onChange={(e) => setPassword(e.target.value)}
                   />
                   {!isPasswordValid && (
-                    <div classNameName="invalid">
+                    <div className="invalid">
                       <span>
                         {password.length === 0
                           ? "* Password is required field"
@@ -143,14 +143,14 @@ const Register = () => {
                   />
 
                   {!isConfirmPasswordValid && (
-                    <div classNameName="invalid">
+                    <div className="invalid">
                       <span>
                         Confirm password does not match with current password
                       </span>
                     </div>
                   )}
                 </div>
-                <button className="btn btn-primary btn-lg btn-block" type="submit">
+                <button className="btn btn-primary btn-lg btn-block w-100" type="submit">
                   Register
                 </button>
 

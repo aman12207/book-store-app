@@ -72,7 +72,7 @@ const Login = () => {
                     onChange={(e) => setEmail(e.target.value)}
                   />
                   {!isEmailValid && (
-                    <div classNameName="invalid">
+                    <div className="invalid">
                       <span>* Please enter a valid Email .</span>
                     </div>
                   )}
@@ -90,7 +90,7 @@ const Login = () => {
                     onChange={(e) => setPassword(e.target.value)}
                   />
                   {!isPasswordValid && (
-                    <div classNameName="invalid">
+                    <div className="invalid">
                       <span>
                         {password.length === 0
                           ? "* Password is required field"
@@ -102,7 +102,7 @@ const Login = () => {
                   )}
                 </div>
 
-                <button className="btn btn-primary btn-lg btn-block" type="submit">
+                <button className="btn btn-primary btn-lg btn-block w-100" type="submit">
                   Login
                 </button>
 
