@@ -48,7 +48,6 @@ const AddBook = () => {
       });
       setBookTitle("");
       setAuthor("");
-      navigate("/");
     } catch (err) {
       toast.error(err.response.data.message, {
         position: "bottom-left",
